@@ -15,12 +15,12 @@ Dans ce laboratoire, on continuera à utiliser la même version du « store mana
 
 > ⚠️ **IMPORTANT** : Les documents ARC42 et ADR contenus dans ce dépôt sont identiques à ceux du laboratoire 03, car nous ne modifions pas l'architecture de l'application dans ce laboratoire.
 
-> 📝 NOTE : À partir de ce laboratoire, nous vous encourageons à utiliser la bibliothèque `logging` plutôt que la commande `print`. Bien que `print` fonctionne bien pour le débogage, l'utilisation d'un logger est une bonne pratique de développement logiciel car il offre [plusieurs avantages lorsque notre application entre en production](https://www.geeksforgeeks.org/python/difference-between-logging-and-print-in-python/). Vous trouverez un exemple d'utilisation du `logging` et plus de détails dans `src/stocks/commands/write_stock.py`.
+> 📝 NOTE : À partir de ce laboratoire, nous vous encourageons à utiliser la bibliothèque `logger` plutôt que la commande `print`. Bien que `print` fonctionne bien pour le débogage, l'utilisation d'un logger est une bonne pratique de développement logiciel car il offre [plusieurs avantages lorsque notre application entre en production](https://www.geeksforgeeks.org/python/difference-between-logging-and-print-in-python/). Vous trouverez un exemple d'utilisation du `logger` et plus de détails dans `src/stocks/commands/write_stock.py`.
 
 ### 1. Créez un nouveau dépôt à partir du gabarit et clonez le dépôt
 ```bash
-git clone https://github.com/[votredepot]/log430-a25-labo4
-cd log430-a25-labo4
+git clone https://github.com/[votredepot]/log430-labo4
+cd log430-labo4
 ```
 
 ### 2. Créez un réseau Docker
@@ -34,9 +34,6 @@ Suivez les mêmes étapes que dans le laboratoire dérnier.
 
 ### 4. Installez Postman
 Suivez les mêmes étapes que dans le laboratoire dérnier. Importez la collection disponible dans `/docs/collections`.
-
-### 5. Préparez l’environnement de déploiement et le pipeline CI/CD
-Utilisez les mêmes approches qui ont été abordées lors des laboratoires dérniers.
 
 ## 🧪 Activités pratiques
 Pendant le labo 02, nous avons implémenté le cache avec Redis. Pendant le labo 03, nous avons utilisé ce cache pour les endpoints des rapports. Dans ce labo, nous allons temporairement désactiver le Redis pour mesurer la différence entre les lectures directement de MySQL vs Redis. Pour faciliter les comparaisons, dans ce laboratoire les méthodes qui font la génération de rapport dans `queries/read_order.py` ont 2 versions : une pour MySQL, autre pour Redis.
